@@ -3,9 +3,42 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqPaging", "src\LinqPaging\LinqPaging.csproj", "{054F107C-BD2C-4841-B5F2-0E6A1F654D2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{D1C021E6-A561-4DD4-8101-8D1D46E640AD}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{069676C2-BE98-4811-A402-B17C3AAD12DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE53F0C9-ED73-47BB-BAF9-AF7E8F939670}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		logo.png = logo.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{94A2E49E-739C-418D-952B-9C40EBF03D14}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{054F107C-BD2C-4841-B5F2-0E6A1F654D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054F107C-BD2C-4841-B5F2-0E6A1F654D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054F107C-BD2C-4841-B5F2-0E6A1F654D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054F107C-BD2C-4841-B5F2-0E6A1F654D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94A2E49E-739C-418D-952B-9C40EBF03D14} = {D1C021E6-A561-4DD4-8101-8D1D46E640AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {192169BC-D428-4F66-9F13-A9A8E6E0ECBD}
