@@ -1,7 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>System.Linq</RootNamespace>
+    <DocumentationFile>C:\Users\admin\Source\Repos\LinqPaging\src\LinqPaging\LinqPaging.xml</DocumentationFile>
+    <Description>Paging made easy with Linq syntax and extensions. Translates directly to SQL for database-side paging when using Entity Framework.</Description>
   </PropertyGroup>
-
 </Project>

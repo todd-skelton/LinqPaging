@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LinqPaging</name>
+    </assembly>
+    <members>
+        <member name="T:System.Linq.EnumerableExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Collections.Generic.IEnumerable`1"/>
+            </summary>
+        </member>
+        <member name="M:System.Linq.EnumerableExtensions.ToPagedList``1(System.Collections.Generic.IEnumerable{``0},System.Linq.IPageable)">
+            <summary>
+            Converts an <see cref="T:System.Collections.Generic.IEnumerable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
+            </summary>
+            <typeparam name="T">The type of data in the source</typeparam>
+            <param name="enumerable">The source data to page</param>
+            <param name="query">Information about paging</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.EnumerableExtensions.ToPagedListAsync``1(System.Collections.Generic.IEnumerable{``0},System.Linq.IPageable)">
+            <summary>
+            Converts an <see cref="T:System.Collections.Generic.IEnumerable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
+            </summary>
+            <typeparam name="T">The type of data in the source</typeparam>
+            <param name="enumerable">The source data to page</param>
+            <param name="query">Information about paging</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.EnumerableExtensions.ToPagedList``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+            <summary>
+            Converts an <see cref="T:System.Collections.Generic.IEnumerable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable"></param>
+            <param name="page"></param>
+            <param name="results"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.EnumerableExtensions.ToPagedListAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+            <summary>
+            Converts an <see cref="T:System.Collections.Generic.IEnumerable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable"></param>
+            <param name="page"></param>
+            <param name="results"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.Linq.IPageable">
+            <summary>
+            Interface to mark a query as pageable
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPageable.Page">
+            <summary>
+            The current page number
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPageable.Results">
+            <summary>
+            The number of results per page
+            </summary>
+        </member>
+        <member name="T:System.Linq.IPagedList">
+            <summary>
+            Exposes a subset of a set of items.
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPagedList.Page">
+            <summary>
+            The current page number
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPagedList.Results">
+            <summary>
+            The number of results per page
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPagedList.Total">
+            <summary>
+            The total number of items in the source
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPagedList.HasNext">
+            <summary>
+            Whether or not the data source has another page
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPagedList.HasPrevious">
+            <summary>
+            Whether or not the data source has a previous page
+            </summary>
+        </member>
+        <member name="T:System.Linq.IPagedList`1">
+            <summary>
+            An interface for a subset of a list of items
+            </summary>
+            <typeparam name="T">The type of items</typeparam>
+        </member>
+        <member name="P:System.Linq.IPagedList`1.Items">
+            <summary>
+            The subset being returned
+            </summary>
+        </member>
+        <member name="T:System.Linq.PagedList`1">
+            <summary>
+            Exposes a subset of a set of items.
+            </summary>
+            <typeparam name="T">The type of items</typeparam>
+        </member>
+        <member name="M:System.Linq.PagedList`1.#ctor(System.Linq.IQueryable{`0},System.Int32,System.Int32)">
+            <summary>
+            Constructs a <see cref="T:System.Linq.PagedList`1"/> from a list of items
+            </summary>
+            <param name="source"></param>
+            <param name="page"></param>
+            <param name="results"></param>
+        </member>
+        <member name="M:System.Linq.PagedList`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32)">
+            <summary>
+            Constructs a <see cref="T:System.Linq.PagedList`1"/> from a list of items
+            </summary>
+            <param name="source"></param>
+            <param name="page"></param>
+            <param name="results"></param>
+        </member>
+        <member name="M:System.Linq.PagedList`1.#ctor(System.Linq.IQueryable{`0},System.Linq.IPageable)">
+            <summary>
+            Constructs a <see cref="T:System.Linq.PagedList`1"/> from a list of items
+            </summary>
+            <param name="source"></param>
+            <param name="query"></param>
+        </member>
+        <member name="M:System.Linq.PagedList`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Linq.IPageable)">
+            <summary>
+            Constructs a <see cref="T:System.Linq.PagedList`1"/> from a list of items
+            </summary>
+            <param name="source"></param>
+            <param name="query"></param>
+        </member>
+        <member name="P:System.Linq.PagedList`1.Items">
+            <summary>
+            The subset being returned
+            </summary>
+        </member>
+        <member name="P:System.Linq.PagedList`1.Page">
+            <summary>
+            The current page number
+            </summary>
+        </member>
+        <member name="P:System.Linq.PagedList`1.Results">
+            <summary>
+            The number of results per page
+            </summary>
+        </member>
+        <member name="P:System.Linq.PagedList`1.Total">
+            <summary>
+            The total number of items in the source
+            </summary>
+        </member>
+        <member name="P:System.Linq.PagedList`1.HasNext">
+            <summary>
+            Whether or not the data source has another page
+            </summary>
+        </member>
+        <member name="P:System.Linq.PagedList`1.HasPrevious">
+            <summary>
+            Whether or not the data source has a previous page
+            </summary>
+        </member>
+        <member name="M:System.Linq.PagedList`1.GetEnumerator">
+            <summary>
+            The enumerator to iterate over the subset
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:System.Linq.QueryableExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Linq.IQueryable`1"/>
+            </summary>
+        </member>
+        <member name="M:System.Linq.QueryableExtensions.ToPagedList``1(System.Linq.IQueryable{``0},System.Linq.IPageable)">
+            <summary>
+            Converts an <see cref="T:System.Linq.IQueryable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
+            </summary>
+            <typeparam name="T">The type of data in the source</typeparam>
+            <param name="queryable">The source data to page</param>
+            <param name="query">Information about paging</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.QueryableExtensions.ToPagedListAsync``1(System.Linq.IQueryable{``0},System.Linq.IPageable)">
+            <summary>
+            Converts an <see cref="T:System.Linq.IQueryable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
+            </summary>
+            <typeparam name="T">The type of data in the source</typeparam>
+            <param name="queryable">The source data to page</param>
+            <param name="query">Information about paging</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.QueryableExtensions.ToPagedList``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            Converts an <see cref="T:System.Linq.IQueryable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queryable"></param>
+            <param name="page"></param>
+            <param name="results"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.QueryableExtensions.ToPagedListAsync``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            Converts an <see cref="T:System.Linq.IQueryable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="queryable"></param>
+            <param name="page"></param>
+            <param name="results"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

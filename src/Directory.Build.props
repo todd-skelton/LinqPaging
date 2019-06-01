@@ -2,17 +2,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.0.0-dev-201906011557</Version>
     <Authors>Todd Skelton</Authors>
     <Company>Kloc Limited Company</Company>
     <Product>Linq Paging</Product>
     <Title>Linq Paging</Title>
-    <PackageIconUrl>https://github.com/xKloc/ConsoleBuildR/blob/master/logo.png?raw=true</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/xKloc/ConsoleBuildR</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/xKloc/LinqPaging/blob/master/logo.png?raw=true</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/xKloc/LinqPaging</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/xKloc/ConsoleBuildR</RepositoryUrl>
+    <RepositoryUrl>https://github.com/xKloc/LinqPaging</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>console builder application dependency injection services excutable configuration</PackageTags>
+    <PackageTags>linq paging pager paged list</PackageTags>
   </PropertyGroup>
 
   <Target Name="PushNuGetPackage" AfterTargets="GenerateNuspec" Condition="'$(Configuration)'=='Release'">
