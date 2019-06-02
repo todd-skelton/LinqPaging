@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace System.Linq
 {
@@ -109,5 +110,11 @@ namespace System.Linq
         /// </summary>
         /// <returns></returns>
         public IEnumerator<T> GetEnumerator() => Items.GetEnumerator();
+
+        /// <summary>
+        /// The enumerator to iterate over the subset
+        /// </summary>
+        /// <returns></returns>
+        IEnumerator IPagedList.GetEnumerator() => Items.GetEnumerator();
     }
 }

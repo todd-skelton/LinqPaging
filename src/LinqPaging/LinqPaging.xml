@@ -92,6 +92,12 @@
             Whether or not the data source has a previous page
             </summary>
         </member>
+        <member name="M:System.Linq.IPagedList.GetEnumerator">
+            <summary>
+            The enumerator to iterate over the subset
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:System.Linq.IPagedList`1">
             <summary>
             An interface for a subset of a list of items
@@ -102,6 +108,12 @@
             <summary>
             The subset being returned
             </summary>
+        </member>
+        <member name="M:System.Linq.IPagedList`1.GetEnumerator">
+            <summary>
+            The enumerator to iterate over the subset
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:System.Linq.PagedList`1">
             <summary>
@@ -170,6 +182,12 @@
             </summary>
         </member>
         <member name="M:System.Linq.PagedList`1.GetEnumerator">
+            <summary>
+            The enumerator to iterate over the subset
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:System.Linq.PagedList`1.System#Linq#IPagedList#GetEnumerator">
             <summary>
             The enumerator to iterate over the subset
             </summary>

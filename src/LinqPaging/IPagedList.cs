@@ -1,4 +1,7 @@
-﻿namespace System.Linq
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace System.Linq
 {
     /// <summary>
     /// Exposes a subset of a set of items.
@@ -25,5 +28,11 @@
         /// Whether or not the data source has a previous page
         /// </summary>
         bool HasPrevious { get; }
+
+        /// <summary>
+        /// The enumerator to iterate over the subset
+        /// </summary>
+        /// <returns></returns>
+        IEnumerator GetEnumerator();
     }
 }

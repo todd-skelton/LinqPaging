@@ -12,5 +12,11 @@ namespace System.Linq
         /// The subset being returned
         /// </summary>
         IEnumerable<T> Items { get; }
+
+        /// <summary>
+        /// The enumerator to iterate over the subset
+        /// </summary>
+        /// <returns></returns>
+        new IEnumerator<T> GetEnumerator();
     }
 }
