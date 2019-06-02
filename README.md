@@ -11,7 +11,7 @@ Paging made easy with Linq syntax and extensions. Translates directly to SQL for
 `dotnet add package LinqPaging`
 
 ### ToPagedList
-Just call `ToPagedList` on your Linq expression to convert the source into a subset.
+Just call `ToPagedList` on your Linq expression to convert the source into a subset. When using Entity Framework, the extension will be translated to SQL using the `Skip` and `Take` methods for you.
 
 ```csharp
 // defaults to page 1, 20 results per page
