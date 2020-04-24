@@ -27,7 +27,7 @@
             <param name="query">Information about paging</param>
             <returns></returns>
         </member>
-        <member name="M:System.Linq.EnumerableExtensions.ToPagedList``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+        <member name="M:System.Linq.EnumerableExtensions.ToPagedList``1(System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
             Converts an <see cref="T:System.Collections.Generic.IEnumerable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
             </summary>
@@ -37,7 +37,7 @@
             <param name="results"></param>
             <returns></returns>
         </member>
-        <member name="M:System.Linq.EnumerableExtensions.ToPagedListAsync``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+        <member name="M:System.Linq.EnumerableExtensions.ToPagedListAsync``1(System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
             Converts an <see cref="T:System.Collections.Generic.IEnumerable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
             </summary>
@@ -121,7 +121,7 @@
             </summary>
             <typeparam name="T">The type of items</typeparam>
         </member>
-        <member name="M:System.Linq.PagedList`1.#ctor(System.Linq.IQueryable{`0},System.Int32,System.Int32)">
+        <member name="M:System.Linq.PagedList`1.#ctor(System.Linq.IQueryable{`0},System.Int32,System.Nullable{System.Int32})">
             <summary>
             Constructs a <see cref="T:System.Linq.PagedList`1"/> from a list of items
             </summary>
@@ -129,7 +129,7 @@
             <param name="page"></param>
             <param name="results"></param>
         </member>
-        <member name="M:System.Linq.PagedList`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32)">
+        <member name="M:System.Linq.PagedList`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Nullable{System.Int32})">
             <summary>
             Constructs a <see cref="T:System.Linq.PagedList`1"/> from a list of items
             </summary>
@@ -216,7 +216,7 @@
             <param name="query">Information about paging</param>
             <returns></returns>
         </member>
-        <member name="M:System.Linq.QueryableExtensions.ToPagedList``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+        <member name="M:System.Linq.QueryableExtensions.ToPagedList``1(System.Linq.IQueryable{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
             Converts an <see cref="T:System.Linq.IQueryable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
             </summary>
@@ -226,7 +226,7 @@
             <param name="results"></param>
             <returns></returns>
         </member>
-        <member name="M:System.Linq.QueryableExtensions.ToPagedListAsync``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+        <member name="M:System.Linq.QueryableExtensions.ToPagedListAsync``1(System.Linq.IQueryable{``0},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
             Converts an <see cref="T:System.Linq.IQueryable`1"/> into a <see cref="T:System.Linq.IPagedList`1"/>
             </summary>

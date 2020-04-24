@@ -40,9 +40,9 @@ namespace System.Linq
         /// <param name="page"></param>
         /// <param name="results"></param>
         /// <returns></returns>
-        public static IPagedList<T> ToPagedList<T>(this IEnumerable<T> enumerable, int page = 1, int results = 20)
+        public static IPagedList<T> ToPagedList<T>(this IEnumerable<T> enumerable, int? page = null, int? results = null)
         {
-            return new PagedList<T>(enumerable, page, results);
+            return new PagedList<T>(enumerable, page ?? 1, results);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace System.Linq
         /// <param name="page"></param>
         /// <param name="results"></param>
         /// <returns></returns>
-        public static Task<IPagedList<T>> ToPagedListAsync<T>(this IEnumerable<T> enumerable, int page = 1, int results = 20)
+        public static Task<IPagedList<T>> ToPagedListAsync<T>(this IEnumerable<T> enumerable, int? page = null, int? results = null)
         {
             return Task.Run(() => ToPagedList(enumerable, page, results));
         }

@@ -15,7 +15,7 @@ namespace System.Linq
         /// <param name="source"></param>
         /// <param name="page"></param>
         /// <param name="results"></param>
-        public PagedList(IQueryable<T> source, int page, int results)
+        public PagedList(IQueryable<T> source, int page, int? results)
         {
             if(source is null)
             {
@@ -27,26 +27,38 @@ namespace System.Linq
                 throw new ArgumentException("Page must be greater than 1", nameof(page));
             }
 
-            if(results < 1)
+            if (results.HasValue)
             {
-                throw new ArgumentException("Results must be greater than 1", nameof(results));
+                if (results < 1)
+                {
+                    throw new ArgumentException("Results must be greater than 1", nameof(results));
+                }
+
+                int index = page - 1;
+
+                int max = index * results.Value;
+
+                var items = source.Skip(max).Take(results.Value).ToList();
+
+                Items = items;
+                Results = results.Value;
+                Total = source.Count();
             }
-
-            int index = page - 1;
-            int max = index * results;
-
-            Items = source.Skip(max).Take(results);
-
-            Total = source.Count();
-
-            if(max > Total)
+            else
             {
-                throw new InvalidOperationException("This page doesn't exist");
+                if(page != 1)
+                {
+                    throw new ArgumentException("If results is null the page must be 1, because all results will be returned in 1 page.", nameof(results));
+                }
+
+                var items = source.ToList();
+
+                Items = items;
+                Results = items.Count;
+                Total = items.Count;
             }
 
             Page = page;
-            Results = results;
-
             HasNext = page * results < Total;
             HasPrevious = page > 1;
         }
@@ -57,7 +69,7 @@ namespace System.Linq
         /// <param name="source"></param>
         /// <param name="page"></param>
         /// <param name="results"></param>
-        public PagedList(IEnumerable<T> source, int page, int results) : this(source.AsQueryable(), page, results) { }
+        public PagedList(IEnumerable<T> source, int page, int? results) : this(source.AsQueryable(), page, results) { }
 
 
         /// <summary>
@@ -65,7 +77,7 @@ namespace System.Linq
         /// </summary>
         /// <param name="source"></param>
         /// <param name="query"></param>
-        public PagedList(IQueryable<T> source, IPageable query) : this(source, query.Page ?? 1, query.Results ?? 10) { }
+        public PagedList(IQueryable<T> source, IPageable query) : this(source, query.Page ?? 1, query.Results) { }
 
 
         /// <summary>

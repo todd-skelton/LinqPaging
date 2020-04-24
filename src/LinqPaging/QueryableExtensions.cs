@@ -39,9 +39,9 @@ namespace System.Linq
         /// <param name="page"></param>
         /// <param name="results"></param>
         /// <returns></returns>
-        public static IPagedList<T> ToPagedList<T>(this IQueryable<T> queryable, int page = 1, int results = 20)
+        public static IPagedList<T> ToPagedList<T>(this IQueryable<T> queryable, int? page = null, int? results = null)
         {
-            return new PagedList<T>(queryable, page, results);
+            return new PagedList<T>(queryable, page ?? 1, results);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace System.Linq
         /// <param name="page"></param>
         /// <param name="results"></param>
         /// <returns></returns>
-        public static Task<IPagedList<T>> ToPagedListAsync<T>(this IQueryable<T> queryable, int page = 1, int results = 20)
+        public static Task<IPagedList<T>> ToPagedListAsync<T>(this IQueryable<T> queryable, int? page = null, int? results = null)
         {
             return Task.Run(() => ToPagedList(queryable, page, results));
         }

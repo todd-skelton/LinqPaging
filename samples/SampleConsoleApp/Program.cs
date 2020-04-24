@@ -13,7 +13,7 @@ namespace SampleConsoleApp
             string json = File.ReadAllText("pokedex.json");
             var pokedex = JsonConvert.DeserializeObject<IEnumerable<Pokemon>>(json);
 
-            var pagedPokedex = pokedex.ToPagedList();
+            var pagedPokedex = pokedex.ToPagedList(1, 20);
 
             while (true)
             {
@@ -26,7 +26,7 @@ namespace SampleConsoleApp
                 Console.WriteLine("-----------------------------");
 
                 if (pagedPokedex.HasNext)
-                    pagedPokedex = pokedex.ToPagedList(pagedPokedex.Page + 1);
+                    pagedPokedex = pokedex.ToPagedList(pagedPokedex.Page + 1, 20);
                 else
                     break;
 
