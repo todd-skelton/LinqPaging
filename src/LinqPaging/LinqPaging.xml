@@ -62,42 +62,6 @@
             The number of results per page
             </summary>
         </member>
-        <member name="T:System.Linq.IPagedList">
-            <summary>
-            Exposes a subset of a set of items.
-            </summary>
-        </member>
-        <member name="P:System.Linq.IPagedList.Page">
-            <summary>
-            The current page number
-            </summary>
-        </member>
-        <member name="P:System.Linq.IPagedList.Results">
-            <summary>
-            The number of results per page
-            </summary>
-        </member>
-        <member name="P:System.Linq.IPagedList.Total">
-            <summary>
-            The total number of items in the source
-            </summary>
-        </member>
-        <member name="P:System.Linq.IPagedList.HasNext">
-            <summary>
-            Whether or not the data source has another page
-            </summary>
-        </member>
-        <member name="P:System.Linq.IPagedList.HasPrevious">
-            <summary>
-            Whether or not the data source has a previous page
-            </summary>
-        </member>
-        <member name="M:System.Linq.IPagedList.GetEnumerator">
-            <summary>
-            The enumerator to iterate over the subset
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:System.Linq.IPagedList`1">
             <summary>
             An interface for a subset of a list of items
@@ -109,11 +73,35 @@
             The subset being returned
             </summary>
         </member>
+        <member name="P:System.Linq.IPagedList`1.Page">
+            <summary>
+            The current page number
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPagedList`1.Results">
+            <summary>
+            The number of results per page
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPagedList`1.Total">
+            <summary>
+            The total number of items in the source
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPagedList`1.HasNext">
+            <summary>
+            Whether or not the data source has another page
+            </summary>
+        </member>
+        <member name="P:System.Linq.IPagedList`1.HasPrevious">
+            <summary>
+            Whether or not the data source has a previous page
+            </summary>
+        </member>
         <member name="M:System.Linq.IPagedList`1.GetEnumerator">
             <summary>
-            The enumerator to iterate over the subset
+             An enumerator that can be used to iterate through the subset.
             </summary>
-            <returns></returns>
         </member>
         <member name="T:System.Linq.PagedList`1">
             <summary>
@@ -182,12 +170,6 @@
             </summary>
         </member>
         <member name="M:System.Linq.PagedList`1.GetEnumerator">
-            <summary>
-            The enumerator to iterate over the subset
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:System.Linq.PagedList`1.System#Linq#IPagedList#GetEnumerator">
             <summary>
             The enumerator to iterate over the subset
             </summary>
